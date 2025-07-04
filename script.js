@@ -156,3 +156,24 @@ document.ontouchstart = evt => birthday.onClick(evt)
   	
 
   })()
+
+
+// Birthday audio
+  const audio = document.getElementById('birthday-audio');
+
+  // Try autoplay after short delay
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      audio.play().catch(() => {
+        console.log("Autoplay blocked. Waiting for user interaction.");
+      });
+    }, 500);
+  });
+
+  // Play on any user click/tap
+  document.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    }
+  });
+
