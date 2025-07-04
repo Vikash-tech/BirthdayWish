@@ -23,3 +23,11 @@ h4 {
   user-select: none;
 }
 
+img {
+      display: block;
+      margin: 0 auto;
+      height: 400px;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px aqua;
+    }
